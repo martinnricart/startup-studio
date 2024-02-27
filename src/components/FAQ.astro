@@ -8,16 +8,28 @@ import { Icon } from "astro-icon";
 <main>
   <br>
   <br>
-  <Link
-  size="lg"
-  style="outline"
-  rel="noopener"
-  href="https://tally.so/r/wA2MAo"
-  class="flex gap-1 items-center justify-center bg-orange-200 hover:bg-orange-200 text-black -500 hover:text-orange-600 rounded-lg p-2"
-  target="_blank">
-  <Icon class="h-4 md:h-4" name="simple-icons:vercel" /> 
-      Aplica Hoy
 </Link>
+<style>
+  .custom-link {
+    background-color: #f7c375; /* Naranja más suave */
+    color: black;
+    border: 1px solid black; /* Borde negro */
+  }
+  
+  .custom-link:hover {
+    background-color: #FFDAB9; /* Naranja más suave para hover */
+  }
+  </style>
+  
+  <Link
+    size="lg"
+    class="custom-link flex gap-1 items-center justify-center rounded-lg p-2"
+    rel="noopener"
+    href="https://tally.so/r/wA2MAo"
+    target="_blank">
+    <Icon class="h-4 md:h-4" name="simple-icons:vercel" /> 
+    Aplica Hoy
+  </Link>
 
 <br>
 
@@ -270,7 +282,7 @@ import { Icon } from "astro-icon";
                   <br />• No hayan recaudado una gran cantidad de dinero de capitalistas
                   de riesgo Dicho esto, si no cumples con los criterios, aún te invitamos
                   a postularte. Leemos todas las solicitudes y evaluamos a cada solicitante
-                  individualmente, basándonos en el contexto de su negocio y equipo.
+                  individualmente, basándonos en el contexto de su negocio y equipo.<br/>•Intraemprendedores: Empleados que deseen emprender en su tiempo libre y quieran mantener su trabajo hasta que el emprendimiento genere la tracción suficiente como para renunciar y dedicarle 100%. "Los mejores emprendedores hacen su emprendimiento cuando están trabajando 
                 </p>
               </div>
             </li>
@@ -299,7 +311,7 @@ import { Icon } from "astro-icon";
               >
                 <p class="p-3 text-gray-900">
                   <!-- {dataToMap[3].respuesta} -->
-                  No como parte del programa de aceleración.
+                  No como parte del programa de incubación.
                 </p>
               </div>
             </li>
@@ -328,7 +340,7 @@ import { Icon } from "astro-icon";
               >
                 <p class="p-3 text-gray-900">
                   <!-- {dataToMap[3].respuesta} -->
-                  No como parte del programa de aceleración.
+                  El programa tiene una duración de 12 a 24 meses.
                 </p>
               </div>
             </li>

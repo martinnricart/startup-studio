@@ -3,6 +3,7 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/hero.png";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+
 ---
 
 <main
@@ -31,19 +32,29 @@ import { Icon } from "astro-icon";
       Mentoría e inversión en tecnología para emprendedores bootstrapped en etapas tempranas.
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
     </Link>
-    <Link
-  size="lg"
-  style="outline"
-  rel="noopener"
-  href="https://tally.so/r/wA2MAo"
-  class="flex gap-1 items-center justify-center bg-orange-400 text-black -500 rounded-lg p-2"
-  target="_blank">
-  <Icon class="h-4 md:h-4" name="simple-icons:vercel" /> 
-      Aplica Hoy
-</Link>
+    <style>
+      .custom-link {
+        background-color: #FFA500;
+        color: black;
+      }
+      
+      .custom-link:hover {
+        background-color: #FFDAB9; /* Naranja más suave para hover */
+      }
+      </style>
+      
+      <Link
+        size="lg"
+        class="custom-link flex gap-1 items-center justify-center rounded-lg p-2"
+        rel="noopener"
+        href="https://tally.so/r/wA2MAo"
+        target="_blank">
+        <Icon class="h-4 md:h-4" name="simple-icons:vercel" /> 
+        Aplica Hoy
+      </Link>
+      
+  
 
     </div>
   </div>
 </main>
-
-

@@ -11,7 +11,8 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/hero.png",
+  "/opengraph.jpg",
+  Astro.site
 ).toString();
 
 const { title } = Astro.props;
@@ -31,12 +32,14 @@ const makeTitle = title
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
-      description="Co creation by ProtolyLab. Impulsando emprendimientos dinámicos."
+      title={makeTitle}
+      description="Co creation by ProtolyLab. Impulsando emprendimientos dinámicos"
+      canonical={canonicalURL}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: Startup Studio,
+          title: `Startup Studio`,
           image: resolvedImageWithDomain,
         },
         image: {
